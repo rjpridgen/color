@@ -18,10 +18,6 @@ export default async function Page(params: {
     const cookieVal = (await cookies()).get("grid")?.value
     const matrix = !cookieVal ? { scale: 1, width: parseInt(width), height: parseInt(height), colors: paletteFrom(4) } : JSON.parse(cookieVal)
 
-    async function clickSquare() {
-        "use server"
-    }
-
     async function updateMatrix(data: Partial<{
         scale: number
         width: number

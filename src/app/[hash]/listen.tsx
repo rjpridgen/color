@@ -21,33 +21,36 @@ export default function Listen({
     const [pending, transition] = useTransition()
 
     useLayoutEffect(() => {
-        const width = window.innerWidth
-        const height = window.innerHeight
-        if (!(width === matrix.width && height === matrix.height) && !pending) {
-            transition(async () => {
-                await setMatrix({
-                    width,
-                    height
+        function onScreenUpdate() {
+            const width = window.innerWidth
+            const height = window.innerHeight
+
+            if (!(width === matrix.width && height === matrix.height) && !pending) {
+                transition(async () => {
+                    await setMatrix({
+                        width,
+                        height
+                    })
                 })
-            })
+            }
         }
+
+        addEventListener("resize", onScreenUpdate)
 
         function update({ key }: KeyboardEvent) {
             if (!pending) {
-                const update = key === "ArrowUp" ? 1 : key === "ArrowDown" ? -1 : 0
-
-                if (update) {
-                    transition(async () => {
-                        await setMatrix({
-                            scale: matrix.scale + update
-                        })
+                transition(async () => {
+                    await setMatrix({
+                        scale: key === "ArrowUp" ? Math.min(matrix.scale + 1, 16) : key === "ArrowDown" ? Math.max(1, matrix.scale - 1) : 0
                     })
-                }
+                })
             }
         }
+
         addEventListener("keydown", update)
         return () => {
             removeEventListener("keydown", update)
+            removeEventListener("resize", onScreenUpdate)
         }
     }, [pending, transition])
 
