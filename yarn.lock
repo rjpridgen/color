@@ -4356,6 +4356,7 @@ __metadata:
     rxjs: "npm:^7.8.0"
     tailwindcss: "npm:^4"
     typescript: "npm:^5"
+    uuid: "npm:^11.1.0"
     wrangler: "npm:^4.14.1"
     zod: "npm:^3.24.3"
   languageName: unknown
@@ -7266,6 +7267,15 @@ __metadata:
   version: 1.0.1
   resolution: "utils-merge@npm:1.0.1"
   checksum: 10c9/5d6949693d58cb2e636a84f3ee1c6e7b2f9c16cb1d42d0ecb386d8c025c69e327205aa1c69e2868cc06a01e5e20681fbba55a4e0ed0cce913d60334024eae798
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^11.1.0":
+  version: 11.1.0
+  resolution: "uuid@npm:11.1.0"
+  bin:
+    uuid: dist/esm/bin/uuid
+  checksum: 10c9/1345ad0e7fb8bd43ae5945aae5fdc0822cdb6aa9ac6d8ad9c664ecb8382b584afc8ad6f3a115cc2a9b48a483685bce3d3155d2c4629b3e95bddd0c03bd963392
   languageName: node
   linkType: hard
 

@@ -1,12 +1,10 @@
 import { createColorStreamIO } from "@/io/color"
-import { fromDimensions } from "@/io/declarations"
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
 import { range } from "ramda"
 import { v4 as uuid } from 'uuid'
 import Listen from "./listen"
 import { paletteFrom } from "@/styles/palettes"
-import { Box } from "./box"
 import { createUniformGrid } from "@/io/grid"
 import { clickCell } from "@/actions/grid.actions"
 
