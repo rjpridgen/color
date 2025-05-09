@@ -4348,6 +4348,7 @@ __metadata:
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"
     d3: "npm:^7.8.2"
+    esbuild: "npm:0.25.4"
     next: "npm:^15.4.0-canary.24"
     openai: "npm:^4.97.0"
     ramda: "npm:^0.28.0"

@@ -37,6 +37,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "virtual:1dadf12cafe93fced205214717c9764f7cfb88e71b7e8209340286a1334fcc47d847e30f1c570a18ee3cf41e802c477a1a125053a9054cb0086c0f0cdd540841#npm:19.1.3"],\
           ["color", "workspace:."],\
           ["d3", "npm:7.9.0"],\
+          ["esbuild", "npm:0.25.4"],\
           ["next", "virtual:1dadf12cafe93fced205214717c9764f7cfb88e71b7e8209340286a1334fcc47d847e30f1c570a18ee3cf41e802c477a1a125053a9054cb0086c0f0cdd540841#npm:15.4.0-canary.28"],\
           ["openai", "virtual:1dadf12cafe93fced205214717c9764f7cfb88e71b7e8209340286a1334fcc47d847e30f1c570a18ee3cf41e802c477a1a125053a9054cb0086c0f0cdd540841#npm:4.98.0"],\
           ["ramda", "npm:0.28.0"],\
@@ -4663,6 +4664,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "virtual:1dadf12cafe93fced205214717c9764f7cfb88e71b7e8209340286a1334fcc47d847e30f1c570a18ee3cf41e802c477a1a125053a9054cb0086c0f0cdd540841#npm:19.1.3"],\
           ["color", "workspace:."],\
           ["d3", "npm:7.9.0"],\
+          ["esbuild", "npm:0.25.4"],\
           ["next", "virtual:1dadf12cafe93fced205214717c9764f7cfb88e71b7e8209340286a1334fcc47d847e30f1c570a18ee3cf41e802c477a1a125053a9054cb0086c0f0cdd540841#npm:15.4.0-canary.28"],\
           ["openai", "virtual:1dadf12cafe93fced205214717c9764f7cfb88e71b7e8209340286a1334fcc47d847e30f1c570a18ee3cf41e802c477a1a125053a9054cb0086c0f0cdd540841#npm:4.98.0"],\
           ["ramda", "npm:0.28.0"],\
