@@ -1,7 +1,7 @@
 "use client"
 
+import { colors } from "@/actions/ai.actions"
 import { clickCell } from "@/actions/grid.actions"
-import { useFormState } from "react-dom"
 
 interface ICell {
     rgb: string
@@ -11,8 +11,8 @@ interface ICell {
 
 export function Box(props: ICell) {
     return (
-        <div className="col">
-            
-        </div>
+        <form className="col" action={props.x === 0 && props.y === 0 ? colors : clickCell}>
+            <button className="block" type="submit" style={{ background: props.rgb }} />
+        </form>
     )
 }

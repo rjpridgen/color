@@ -6,7 +6,9 @@ import { v4 as uuid } from 'uuid'
 import Listen from "./listen"
 import { paletteFrom } from "@/styles/palettes"
 import { createUniformGrid } from "@/io/grid"
-import { clickCell } from "@/actions/grid.actions"
+import { Box } from "./box"
+
+export const runtime = "edge"
 
 export default async function Page(params: {
     params: Promise<{
@@ -59,9 +61,12 @@ export default async function Page(params: {
             {grid.map(({ id, columns }, i1) => (
                 <div className="row" key={id}>
                     {columns.map((col, i2) => (
-                        <form className="col" key={(i1 + (i1 * grid.length)) + i2} action={clickCell}>
-                            <button className="block"  type="submit" style={{ backgroundColor: col.rgbStr }} />
-                        </form>
+                        <Box
+                            key={(i1 + (i1 * grid.length)) + i2}
+                            rgb={col.rgbStr}
+                            x={i1}
+                            y={i2} 
+                        />
                     ))}
                 </div>
             ))}
