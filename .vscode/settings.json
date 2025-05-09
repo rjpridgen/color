@@ -1,5 +1,11 @@
 {
-	"files.associations": {
-		"wrangler.json": "jsonc"
-	}
+  "files.associations": {
+    "wrangler.json": "jsonc"
+  },
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

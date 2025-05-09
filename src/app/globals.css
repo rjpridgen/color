@@ -9,6 +9,15 @@ main {
   flex: 1;
 }
 
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.05);
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
