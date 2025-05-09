@@ -1,23 +1,18 @@
-export async function Box({
-    color,
-    col,
-    row
-}: {
-    color: string;
-    col: number;
-    row: number;
-}) {
-    async function clickSquare() {
-        "use server"
+"use client"
 
-        console.log(color, col, row)
-    }
+import { clickCell } from "@/actions/grid.actions"
+import { useFormState } from "react-dom"
 
+interface ICell {
+    rgb: string
+    x: number
+    y: number
+}
+
+export function Box(props: ICell) {
     return (
-        <form className="col" action={clickSquare}>
-            <button className="block" style={{
-                    backgroundColor: color
-                }}  />
-        </form>
+        <div className="col">
+            
+        </div>
     )
 }

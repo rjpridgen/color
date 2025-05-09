@@ -7,6 +7,8 @@ import { v4 as uuid } from 'uuid'
 import Listen from "./listen"
 import { paletteFrom } from "@/styles/palettes"
 import { Box } from "./box"
+import { createUniformGrid } from "@/io/grid"
+import { clickCell } from "@/actions/grid.actions"
 
 export default async function Page(params: {
     params: Promise<{
@@ -37,10 +39,9 @@ export default async function Page(params: {
         redirect(`/${updateData.width.toString()},${updateData.height.toString()},${uuid()}`)
     }
 
-    const [rows, columns] = fromDimensions([1.2 * (matrix.scale + 1), Math.PI])([
-        matrix.width,
-        matrix.height
-    ])
+    const gridArr = createUniformGrid(matrix.width, matrix.height, matrix.scale)
+    const rows = gridArr.length
+    const columns = gridArr[0].length
     const xAxis = range(0, rows)
     const yAxis = range(0, columns)
     const colorMatrix = createColorStreamIO(matrix.colors, rows, columns)
@@ -54,16 +55,18 @@ export default async function Page(params: {
     }))
 
     return (
-        <div className="wrapper">
+        <form className="wrapper">
             <Listen matrix={matrix} setMatrix={updateMatrix} />
 
             {grid.map(({ id, columns }, i1) => (
                 <div className="row" key={id}>
                     {columns.map((col, i2) => (
-                        <Box key={(i1 + (i1 * grid.length)) + i2} color={col.rgbStr} col={i1} row={i2} />
+                        <form className="col" key={(i1 + (i1 * grid.length)) + i2} action={clickCell}>
+                            <button className="block"  type="submit" style={{ backgroundColor: col.rgbStr }} />
+                        </form>
                     ))}
                 </div>
             ))}
-        </div>
+        </form>
     )
 }
