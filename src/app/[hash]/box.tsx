@@ -14,8 +14,8 @@ export async function Box({
     }
 
     return (
-        <form className="col" >
-            <button className="block" formAction={clickSquare} style={{
+        <form className="col" action={clickSquare}>
+            <button className="block" style={{
                     backgroundColor: color
                 }}  />
         </form>
