@@ -23,7 +23,7 @@
 		"zod": "^3.24.3"
 	},
 	"devDependencies": {
-		"@opennextjs/cloudflare": "~1.0.0-beta.0 || ^1.0.0",
+		"@opennextjs/cloudflare": "1.0.1",
 		"@tailwindcss/postcss": "^4",
 		"@types/d3": "^7.4.3",
 		"@types/node": "^20",
@@ -31,9 +31,11 @@
 		"@types/react": "^19",
 		"@types/react-dom": "^19",
 		"esbuild": "0.25.4",
+		"sharp": "0.33.5",
 		"tailwindcss": "^4",
 		"typescript": "^5",
-		"wrangler": "^4.14.1"
+		"workerd": "1.20250509.0",
+		"wrangler": "4.14.1"
 	},
-	"packageManager": "yarn@4.9.1"
+	"packageManager": "yarn@4.9.1+sha256.15ce76682a8cd2090257b883cd69c637925b29573f9573e8403ec227d5ab6815"
 }
