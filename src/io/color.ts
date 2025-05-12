@@ -31,7 +31,7 @@ export const createColorStreamIO = (
   hexOrRgbArr: string[],
   rows: number,
   cols: number
-): string[][] => {
+) => {
   const { hueSort, chromaSort, lightSort } = sortedColorsFromRgbArr(hexOrRgbArr)
 
   const sortedByChroma = piecewise(d3.interpolateLab, chromaSort)

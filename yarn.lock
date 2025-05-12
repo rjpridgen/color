@@ -4198,6 +4198,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash@npm:^4.17.16":
+  version: 4.17.16
+  resolution: "@types/lodash@npm:4.17.16"
+  checksum: 10c9/9a8bb7471a7521bd65d528e1bd14f79819a3eeb6f8a35a8a44649a7d773775c0813e93fd93bd32ccf350bb076c0bf02c6d47877c4625f526f6dd4d283c746aec
+  languageName: node
+  linkType: hard
+
 "@types/node-fetch@npm:^2.6.4":
   version: 2.6.12
   resolution: "@types/node-fetch@npm:2.6.12"
@@ -4568,12 +4575,14 @@ __metadata:
     "@opennextjs/cloudflare": "npm:1.0.1"
     "@tailwindcss/postcss": "npm:^4"
     "@types/d3": "npm:^7.4.3"
+    "@types/lodash": "npm:^4.17.16"
     "@types/node": "npm:^20"
     "@types/ramda": "npm:^0.30.2"
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"
     d3: "npm:^7.8.2"
     esbuild: "npm:0.25.4"
+    lodash: "npm:4.17.21"
     next: "npm:^15.4.0-canary.24"
     openai: "npm:^4.97.0"
     ramda: "npm:^0.28.0"
@@ -6143,6 +6152,13 @@ __metadata:
     lightningcss-win32-x64-msvc:
       optional: true
   checksum: 10c9/dadd85a1d46699d831c56633b6d6461916229b2291f32197af5249bc8295b9b9232d9cc26777b8de74413973e560c7b543a699ca922a9ebb4ef7fcb4646411cf
+  languageName: node
+  linkType: hard
+
+"lodash@npm:4.17.21":
+  version: 4.17.21
+  resolution: "lodash@npm:4.17.21"
+  checksum: 10c9/d50decefdc816f31e31813b5a603847f86b3819f7927fe9605e4c9a5a28838b648d953176755507fe43dc21ade8f0b384848b264578f0d32d22467ac5ddd8d6b
   languageName: node
   linkType: hard
 
